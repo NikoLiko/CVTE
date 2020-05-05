@@ -255,6 +255,7 @@ def run_webdriver_enrollment_plan(id, browser):
                         if isNotSelected(btn_batch):
                             btn_batch.click()
                         wait.until(EC.visibility_of_all_elements_located((By.ID, "batch_list")))
+                        batch.click()
                         time.sleep(1)
                         box = browser.find_elements_by_class_name("schoolLine")[1]
                         li_list = box.find_elements_by_tag_name("li")
