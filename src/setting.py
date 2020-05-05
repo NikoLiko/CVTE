@@ -203,6 +203,7 @@ def run_webdriver_enrollment_plan(id, browser):
         btn_year = browser.find_elements_by_class_name("ant-select-selection--single")[4]
         btn_subject = browser.find_elements_by_class_name("ant-select-selection--single")[3]
         btn_batch = browser.find_elements_by_class_name("ant-select-selection--single")[5]
+        btn_pro.click()
         pro_list = wait.until(EC.visibility_of_all_elements_located((By.CLASS_NAME, "ant-select-dropdown-menu-item")))
         js = "document.getElementsByClassName('ant-select-dropdown-menu')[0].setAttribute('id', 'pro_list');"
         browser.execute_script(js)
@@ -223,6 +224,7 @@ def run_webdriver_enrollment_plan(id, browser):
     except (StaleElementReferenceException, ElementClickInterceptedException, TimeoutException, IndexError, ElementNotInteractableException, JavascriptException):
         print("页面加载出错，放弃{}".format(id))
         flag = 0
+        browser.close()
         return None, flag
     for pro in pro_list:
         try:
@@ -307,8 +309,10 @@ def run_webdriver_enrollment_plan(id, browser):
             print("错误是：", e)
             flag = 0
     if content_list:
+        browser.close()
         return content_list, flag
     else:
+        browser.close()
         return None, flag
 
 
