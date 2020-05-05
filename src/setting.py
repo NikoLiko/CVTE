@@ -27,8 +27,8 @@ already_file = ""
 folder = sys.argv[1]
 one_in_three = sys.argv[2]
 # 这里使用25-30分钟的ip
-order_id = "998826406696988"
-api_key = "pw8dmploxjkeh4yb4i007hggtgcl7874"
+order_id = "928855456333631	"
+api_key = "3uauz6ng1yet7jx46q6flwxc17p33a3m"
 
 
 # 请求代理ip，直接返回代理字符串
