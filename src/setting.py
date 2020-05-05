@@ -27,7 +27,7 @@ already_file = ""
 folder = sys.argv[1]
 one_in_three = sys.argv[2]
 # 这里使用25-30分钟的ip
-order_id = "928855456333631	"
+order_id = "928855456333631"
 api_key = "3uauz6ng1yet7jx46q6flwxc17p33a3m"
 
 
